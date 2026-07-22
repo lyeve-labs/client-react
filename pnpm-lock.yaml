@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@lyeve/cms-client':
-        specifier: file:../cms-client
-        version: file:../cms-client
+        specifier: ^0.1.0
+        version: 0.1.0
       '@lyeve/cms-client-rest':
-        specifier: file:../cms-client-rest
-        version: file:../cms-client-rest(@lyeve/cms-client@file:../cms-client)
+        specifier: ^0.1.0
+        version: 0.1.0(@lyeve/cms-client@0.1.0)
       '@types/react':
         specifier: ^18.0.0
         version: 18.3.31
@@ -342,14 +342,14 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@lyeve/cms-client-rest@file:../cms-client-rest':
-    resolution: {directory: ../cms-client-rest, type: directory}
+  '@lyeve/cms-client-rest@0.1.0':
+    resolution: {integrity: sha512-LFztZMR6UYJstFBGW5d5P2CCPcD9W2pl/xGiuZdKfj3i/OOddz3XqqUzhEqvQpGFaZ6jpmRuwB+bWk57YE5AFw==}
     engines: {node: '>=20'}
     peerDependencies:
       '@lyeve/cms-client': '>=0.1.0'
 
-  '@lyeve/cms-client@file:../cms-client':
-    resolution: {directory: ../cms-client, type: directory}
+  '@lyeve/cms-client@0.1.0':
+    resolution: {integrity: sha512-j2qO4pC1OSwJGVDrRzrD/BWY1bTg5J2ddqZEwp4wt7h52bDopd2EHX9bj0c5Ke4TRhfDZRL0+MYfvwG8U8//ug==}
     engines: {node: '>=20'}
 
   '@publint/pack@0.1.5':
@@ -1060,11 +1060,11 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@lyeve/cms-client-rest@file:../cms-client-rest(@lyeve/cms-client@file:../cms-client)':
+  '@lyeve/cms-client-rest@0.1.0(@lyeve/cms-client@0.1.0)':
     dependencies:
-      '@lyeve/cms-client': file:../cms-client
+      '@lyeve/cms-client': 0.1.0
 
-  '@lyeve/cms-client@file:../cms-client': {}
+  '@lyeve/cms-client@0.1.0': {}
 
   '@publint/pack@0.1.5':
     dependencies:

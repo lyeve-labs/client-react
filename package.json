@@ -36,8 +36,8 @@
     "react": ">=18.0.0"
   },
   "devDependencies": {
-    "@lyeve/cms-client": "file:../cms-client",
-    "@lyeve/cms-client-rest": "file:../cms-client-rest",
+    "@lyeve/cms-client": "^0.1.0",
+    "@lyeve/cms-client-rest": "^0.1.0",
     "@types/react": "^18.0.0",
     "react": "^18.0.0",
     "tsup": "^8.4.0",
