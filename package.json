@@ -44,11 +44,10 @@
   },
   "devDependencies": {
     "@lyeve/cms-client": "^0.1.0",
-    "@lyeve/cms-client-rest": "^0.1.0",
-    "@testing-library/jest-dom": "^7.0.0",
     "@testing-library/react": "^16.3.2",
-    "@types/react": "^18.3.31",
+    "@types/react": "^19.2.0",
     "jsdom": "^29.1.1",
+    "prettier": "^3.4.0",
     "publint": "^0.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
