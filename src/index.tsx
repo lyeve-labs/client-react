@@ -32,7 +32,7 @@ import {
   useContext,
   useCallback,
   useEffect,
-  useRef,
+  useMemo,
   useState,
   type ReactNode,
 } from 'react';
@@ -82,20 +82,17 @@ function useClient(): HttpClient {
   if (!config) {
     throw new Error('CmsProvider must wrap your component tree');
   }
-  const base = config.baseUrl ?? '';
-
-  return useRef(
-    createClient((url, init) => {
+  // Re-create when config changes so getHeaders/auth tokens stay current.
+  return useMemo(() => {
+    const base = config.baseUrl ?? '';
+    return createClient((url, init) => {
       const fullUrl = typeof url === 'string' ? `${base}${url}` : url;
       return fetch(fullUrl, {
         ...init,
-        headers: {
-          ...init?.headers,
-          ...config.getHeaders?.(),
-        },
+        headers: { ...init?.headers, ...config.getHeaders?.() },
       });
-    }),
-  ).current;
+    });
+  }, [config.baseUrl, config.getHeaders]);
 }
 
 // Hooks
@@ -136,7 +133,7 @@ export function useQuery<T>(
     fetcher(client)
       .then((data) => setState({ data, error: null, loading: false }))
       .catch((error) =>
-        setState({ data: null, error: error as Error, loading: false }),
+        setState((s) => ({ ...s, error: error as Error, loading: false })),
       );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [client, ...deps]);
