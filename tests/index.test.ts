@@ -1,16 +1,10 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { createClient, ApiError } from '@lyeve/cms-client';
+import { ApiError } from '@lyeve/cms-client';
 import { CmsProvider, useQuery, useMutation } from '../src/index.js';
 
 // Need React for hooks testing
 import { createElement, type ReactNode } from 'react';
 import { renderHook, act } from '@testing-library/react';
-
-function mkClient(body: unknown = {}, status = 200) {
-	const fetchFn = vi.fn(async (_url: string, _init: RequestInit): Promise<Response> =>
-		new Response(status === 204 ? null : JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } }));
-	return { client: createClient(fetchFn as unknown as typeof fetch), fetchFn };
-}
 
 function wrapper(config: { baseUrl?: string } = {}) {
 	return ({ children }: { children: ReactNode }) =>
