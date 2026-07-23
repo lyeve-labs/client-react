@@ -26,7 +26,7 @@
  * @packageDocumentation
  */
 
-import { createClient, type HttpClient } from '@lyeve/cms-client';
+import { createClient, type HttpClient } from "@lyeve/cms-client";
 import {
   createContext,
   useContext,
@@ -35,7 +35,7 @@ import {
   useMemo,
   useState,
   type ReactNode,
-} from 'react';
+} from "react";
 
 // Provider
 
@@ -80,13 +80,13 @@ export function CmsProvider({
 function useClient(): HttpClient {
   const config = useContext(CmsContext);
   if (!config) {
-    throw new Error('CmsProvider must wrap your component tree');
+    throw new Error("CmsProvider must wrap your component tree");
   }
   // Re-create when config changes so getHeaders/auth tokens stay current.
   return useMemo(() => {
-    const base = config.baseUrl ?? '';
+    const base = config.baseUrl ?? "";
     return createClient((url, init) => {
-      const fullUrl = typeof url === 'string' ? `${base}${url}` : url;
+      const fullUrl = typeof url === "string" ? `${base}${url}` : url;
       return fetch(fullUrl, {
         ...init,
         headers: { ...init?.headers, ...config.getHeaders?.() },

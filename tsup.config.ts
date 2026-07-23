@@ -1,11 +1,11 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: { index: 'src/index.tsx' },
-  format: ['esm', 'cjs'],
+  entry: { index: "src/index.tsx" },
+  format: ["esm", "cjs"],
   dts: true,
   sourcemap: true,
   clean: true,
   splitting: false,
-  external: ['@lyeve/cms-client', 'react'],
+  external: ["@lyeve/cms-client", "react"],
 });
