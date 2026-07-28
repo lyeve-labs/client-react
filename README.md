@@ -1,6 +1,6 @@
 # @lyeve/cms-client-react
 
-React hooks for the LyEve CMS. Typed, reactive data fetching built on
+React hooks for the LyEve Core. Typed, reactive data fetching built on
 `@lyeve/cms-client`.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
