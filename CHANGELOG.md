@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Stale closure in `useClient`: replaced `useRef(...).current` with `useMemo` so the client re-creates when `config.baseUrl` or `config.getHeaders` change.
 - Preserve existing data on fetch error instead of setting `null`, preventing UI flash during transient failures.
-- Removed unused devDependencies (`@lyeve/cms-client-rest`, `@testing-library/jest-dom`).
+- Removed unused devDependencies (`@lyeve-labs/client-rest`, `@testing-library/jest-dom`).
 
 ## [0.1.0] - 2026-07-23
 

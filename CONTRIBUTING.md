@@ -1,4 +1,4 @@
-# Contributing to `@lyeve/cms-client-react`
+# Contributing to `@lyeve-labs/client-react`
 
 ## Quick start
 

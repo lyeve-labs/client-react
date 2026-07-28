@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-If you find a security vulnerability in `@lyeve/cms-client-react`, **do not**
+If you find a security vulnerability in `@lyeve-labs/client-react`, **do not**
 open a public issue. Send the details to **security@lyeve.com** instead. We'll
 acknowledge within 48 hours and aim to resolve within 7 days.
 

@@ -1,19 +1,19 @@
-# @lyeve/cms-client-react
+# @lyeve-labs/client-react
 
 React hooks for the LyEve Core. Typed, reactive data fetching built on
-`@lyeve/cms-client`.
+`@lyeve-labs/client`.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-18+-61dafb.svg)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178c6.svg)](https://www.typescriptlang.org)
 
 ```bash
-pnpm add @lyeve/cms-client @lyeve/cms-client-react
+pnpm add @lyeve-labs/client @lyeve-labs/client-react
 ```
 
 ```tsx
-import { CmsProvider, useQuery, useMutation } from "@lyeve/cms-client-react";
-import { getSchemas, createSchema } from "@lyeve/cms-client-rest";
+import { CmsProvider, useQuery, useMutation } from "@lyeve-labs/client-react";
+import { getSchemas, createSchema } from "@lyeve-labs/client-rest";
 
 function App() {
   return (
@@ -51,14 +51,14 @@ loading, refetch }`. Preserves existing data on fetch errors to prevent UI flash
 
 - **Node 20** or newer
 - **React 18** or newer
-- **[@lyeve/cms-client](https://www.npmjs.com/package/@lyeve/cms-client)** `>=0.1.0`
+- **[@lyeve-labs/client](https://www.npmjs.com/package/@lyeve-labs/client)** `>=0.1.0`
 
 ## Install
 
 ```bash
-pnpm add @lyeve/cms-client @lyeve/cms-client-react
-# or npm install @lyeve/cms-client @lyeve/cms-client-react
-# or yarn add @lyeve/cms-client @lyeve/cms-client-react
+pnpm add @lyeve-labs/client @lyeve-labs/client-react
+# or npm install @lyeve-labs/client @lyeve-labs/client-react
+# or yarn add @lyeve-labs/client @lyeve-labs/client-react
 ```
 
 ## Use
@@ -68,7 +68,7 @@ pnpm add @lyeve/cms-client @lyeve/cms-client-react
 Wrap your app once at the root:
 
 ```tsx
-import { CmsProvider } from "@lyeve/cms-client-react";
+import { CmsProvider } from "@lyeve-labs/client-react";
 
 function App() {
   return (
@@ -87,8 +87,8 @@ function App() {
 ### useQuery
 
 ```tsx
-import { useQuery } from "@lyeve/cms-client-react";
-import { getSchemas } from "@lyeve/cms-client-rest";
+import { useQuery } from "@lyeve-labs/client-react";
+import { getSchemas } from "@lyeve-labs/client-rest";
 
 function SchemaList() {
   const { data, error, loading, refetch } = useQuery((client) =>
@@ -111,8 +111,8 @@ function SchemaList() {
 ### useMutation
 
 ```tsx
-import { useMutation } from "@lyeve/cms-client-react";
-import { createSchema } from "@lyeve/cms-client-rest";
+import { useMutation } from "@lyeve-labs/client-react";
+import { createSchema } from "@lyeve-labs/client-rest";
 
 function CreateForm() {
   const [create, { loading, error }] = useMutation(
@@ -197,7 +197,7 @@ tests/               # vitest test suite
 
 ## Versioning
 
-`@lyeve/cms-client-react` follows [SemVer](https://semver.org). While under `1.0`,
+`@lyeve-labs/client-react` follows [SemVer](https://semver.org). While under `1.0`,
 breaking changes bump the **minor** version; additive changes bump the **patch**.
 Every release is logged in [`CHANGELOG.md`](CHANGELOG.md).
 

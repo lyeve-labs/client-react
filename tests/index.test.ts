@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { ApiError } from "@lyeve/cms-client";
+import { ApiError } from "@lyeve-labs/client";
 import { CmsProvider, useQuery, useMutation } from "../src/index.js";
 
 // Need React for hooks testing

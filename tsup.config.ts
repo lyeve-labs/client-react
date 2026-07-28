@@ -7,5 +7,5 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   splitting: false,
-  external: ["@lyeve/cms-client", "react"],
+  external: ["@lyeve-labs/client", "react"],
 });
