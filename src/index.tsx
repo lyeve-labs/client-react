@@ -1,13 +1,13 @@
 /**
  * LyEve CMS React hooks - typed, reactive data fetching.
  *
- * Thin wrapper around {@link @lyeve/cms-client} that makes the client
+ * Thin wrapper around {@link @lyeve-labs/client} that makes the client
  * available via context and provides `useQuery` / `useMutation` hooks.
  *
  * @example
  * ```tsx
- * import { CmsProvider, useQuery } from '@lyeve/cms-client-react';
- * import { getSchemas } from '@lyeve/cms-client-rest';
+ * import { CmsProvider, useQuery } from '@lyeve-labs/client-react';
+ * import { getSchemas } from '@lyeve-labs/client-rest';
  *
  * function App() {
  *   return (
@@ -26,7 +26,7 @@
  * @packageDocumentation
  */
 
-import { createClient, type HttpClient } from "@lyeve/cms-client";
+import { createClient, type HttpClient } from "@lyeve-labs/client";
 import {
   createContext,
   useContext,
