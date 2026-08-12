@@ -61,6 +61,9 @@ pnpm add @lyeve-labs/client @lyeve-labs/client-react
 # or yarn add @lyeve-labs/client @lyeve-labs/client-react
 ```
 
+The examples below fetch through the REST helpers, which ship separately. Add
+`@lyeve-labs/client-rest` if you want them, or pass any fetcher of your own.
+
 ## Use
 
 ### Provider
