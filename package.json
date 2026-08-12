@@ -44,11 +44,11 @@
     "format:check": "prettier --check ."
   },
   "peerDependencies": {
-    "@lyeve-labs/client": ">=0.2.0",
+    "@lyeve-labs/client": ">=0.2.1",
     "react": ">=18.0.0"
   },
   "devDependencies": {
-    "@lyeve-labs/client": "^0.2.0",
+    "@lyeve-labs/client": "^0.3.0",
     "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.0",
     "jsdom": "^29.1.1",

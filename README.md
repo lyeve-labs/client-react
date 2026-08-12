@@ -51,7 +51,7 @@ loading, refetch }`. Preserves existing data on fetch errors to prevent UI flash
 
 - **Node 20** or newer
 - **React 18** or newer
-- **[@lyeve-labs/client](https://www.npmjs.com/package/@lyeve-labs/client)** `>=0.1.0`
+- **[@lyeve-labs/client](https://www.npmjs.com/package/@lyeve-labs/client)** `>=0.2.1`
 
 ## Install
 
