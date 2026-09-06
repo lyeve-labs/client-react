@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.5] - 2026-09-06
+
+### Fixed
+
+- Supersede 0.2.4, which was published to npm from an unmerged `dev` commit and
+  therefore exists under no git tag. Publishing moved off the tag in
+  `ci: publish this package by hand, not from a tag` and nothing replaced the
+  tag step, so a published version left no ref behind. The code users are
+  running is unchanged; this release gives it a tag, a `main` merge and an
+  entry here. A published version is superseded, never rewritten.
+
+## [0.2.4] - 2026-09-02
+
+### Changed
+
+- CONTRIBUTING documents the branch model. It covered commits and releases but never said which branch a change starts from: work branches off `dev` and the PR goes back into `dev`, while `main` takes merges and carries the release tags.
+
 ## [0.2.3] - 2026-08-12
 
 ### Changed
