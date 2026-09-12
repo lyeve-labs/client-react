@@ -4,6 +4,14 @@
   "description": "React hooks for LyEve Core - typed, reactive data fetching",
   "license": "MIT",
   "author": "LyEve Labs <info@lyeve.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyeve-labs/client-react.git"
+  },
+  "homepage": "https://github.com/lyeve-labs/client-react#readme",
+  "bugs": {
+    "url": "https://github.com/lyeve-labs/client-react/issues"
+  },
   "type": "module",
   "packageManager": "pnpm@11.25.0",
   "engines": {
