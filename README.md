@@ -13,7 +13,8 @@ pnpm add @lyeve-labs/client @lyeve-labs/client-react
 
 ```tsx
 import { CmsProvider, useQuery, useMutation } from "@lyeve-labs/client-react";
-import { getSchemas, createSchema } from "@lyeve-labs/client-rest";
+import { getSchemas, upsertSchema } from "@lyeve-labs/client-rest";
+import type { Schema } from "@lyeve-labs/client";
 
 function App() {
   return (
@@ -25,10 +26,11 @@ function App() {
 
 function SchemaManager() {
   const { data, loading } = useQuery((client) => getSchemas(client));
-  const [create, { loading: creating }] = useMutation(
-    (client, vars: { name: string }) => createSchema(client, vars),
+  const [save, { loading: saving }] = useMutation((client, schema: Schema) =>
+    upsertSchema(schema, client),
   );
-  // ...
+  if (loading || saving) return <p>Loading...</p>;
+  return <p>{data?.length ?? 0} schemas</p>;
 }
 ```
 
@@ -49,7 +51,7 @@ loading, refetch }`. Preserves existing data on fetch errors to prevent UI flash
 
 ## Requirements
 
-- **Node 20** or newer
+- **Node 24** or newer
 - **React 18** or newer
 - **[@lyeve-labs/client](https://www.npmjs.com/package/@lyeve-labs/client)** `>=0.2.1`
 
@@ -104,7 +106,7 @@ function SchemaList() {
   return (
     <ul>
       {data?.map((s) => (
-        <li key={s.id}>{s.name}</li>
+        <li key={s.name}>{s.display_name}</li>
       ))}
     </ul>
   );
@@ -115,16 +117,30 @@ function SchemaList() {
 
 ```tsx
 import { useMutation } from "@lyeve-labs/client-react";
-import { createSchema } from "@lyeve-labs/client-rest";
+import { upsertSchema } from "@lyeve-labs/client-rest";
+import type { Schema } from "@lyeve-labs/client";
+import type { FormEvent } from "react";
 
 function CreateForm() {
-  const [create, { loading, error }] = useMutation(
-    (client, vars: { name: string }) => createSchema(client, vars),
+  const [create, { loading, error }] = useMutation((client, schema: Schema) =>
+    upsertSchema(schema, client),
   );
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    await create({ name: "articles" });
+    await create({
+      name: "articles",
+      display_name: "Articles",
+      fields: [
+        {
+          name: "title",
+          field_type: "text",
+          required: true,
+          unique: false,
+          indexed: true,
+        },
+      ],
+    });
   }
 
   return (

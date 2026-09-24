@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- The README examples compile. They imported `createSchema`, which
+  `@lyeve-labs/client-rest` does not export; the function is
+  `upsertSchema(schema, client)`. They keyed a list on `Schema.id`, which the
+  type does not have; a schema is keyed by its `name`. The Node floor reads 24.
+
 ## [0.2.7] - 2026-09-12
 
 ### Fixed
