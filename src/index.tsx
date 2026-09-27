@@ -113,7 +113,7 @@ export interface AsyncState<T> {
  * ```ts
  * const { data, error, loading, refetch } = useQuery(
  *   (client) => getSchemas(client),
- * );
+ * ).
  * ```
  */
 export function useQuery<T>(
