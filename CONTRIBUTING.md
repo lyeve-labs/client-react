@@ -3,8 +3,8 @@
 ## Quick start
 
 ```bash
-git clone git@github.com:lyeve-labs/cms-client-react.git
-cd cms-client-react
+git clone https://github.com/lyeve-labs/client-react.git
+cd client-react
 pnpm install
 pnpm test         # verify everything works
 ```
