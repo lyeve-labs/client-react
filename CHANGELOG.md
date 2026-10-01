@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.8] - 2026-10-01
+
+### Fixed
+
+- The README examples compile. They imported `createSchema`, which
+  `@lyeve-labs/client-rest` does not export; the function is
+  `upsertSchema(schema, client)`. They keyed a list on `Schema.id`, which the
+  type does not have; a schema is keyed by its `name`. The Node floor reads 24.
+
 ## [0.2.7] - 2026-09-12
 
 ### Fixed
@@ -32,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation and shipped strings no longer carry em dashes, unicode
   ellipses or unicode bullets. Where a string is an error or a log line the
   wording changed and nothing else: status codes, machine-readable error codes
-  and behaviour are untouched, so a client matching on a code is unaffected.
+  and behavior are untouched, so a client matching on a code is unaffected.
 - An elision inside a code span now uses three ASCII periods, so a reader who
   copies one gets something their tool accepts.
 

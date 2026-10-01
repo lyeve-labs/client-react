@@ -1,5 +1,5 @@
 /**
- * LyEve CMS React hooks - typed, reactive data fetching.
+ * LyEve CMS React hooks: typed, reactive data fetching.
  *
  * Thin wrapper around {@link @lyeve-labs/client} that makes the client
  * available via context and provides `useQuery` / `useMutation` hooks.
@@ -113,7 +113,7 @@ export interface AsyncState<T> {
  * ```ts
  * const { data, error, loading, refetch } = useQuery(
  *   (client) => getSchemas(client),
- * );
+ * ).
  * ```
  */
 export function useQuery<T>(
