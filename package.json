@@ -1,6 +1,6 @@
 {
   "name": "@lyeve-labs/client-react",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "React hooks for LyEve Core - typed, reactive data fetching",
   "license": "MIT",
   "author": "LyEve Labs <info@lyeve.com>",
@@ -59,15 +59,15 @@
   },
   "devDependencies": {
     "@lyeve-labs/client": "^0.5.0",
-    "@testing-library/react": "^16.3.2",
-    "@types/react": "^19.2.0",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
     "jsdom": "^29.1.1",
-    "prettier": "^3.4.0",
-    "publint": "^0.3.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "tsup": "^8.4.0",
-    "typescript": "^5.7.0",
-    "vitest": "^2.1.0"
+    "prettier": "^3.9.10",
+    "publint": "^0.3.25",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
   }
 }
